@@ -68,6 +68,8 @@ body {
 .header {
   position: relative;
   display: block;
+  height: 50px;
+  background-color: #ffd940;
 }
 
 .header .inner {
