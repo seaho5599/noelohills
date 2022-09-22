@@ -36,6 +36,26 @@ body {
   overflow-x: hidden;
 }
 
+::-moz-selection {
+  background: #1abc9c;
+  color: #fff;
+}
+
+::selection {
+  background: #1abc9c;
+  color: #fff;
+}
+
+::-moz-selection {
+  background: #1abc9c;
+  color: #fff;
+}
+
+::-webkit-selection {
+  background: #1abc9c;
+  color: #fff;
+}
+
 /* 공통클래스 */
 .clearfix::after {
   content: "";
@@ -51,6 +71,99 @@ body {
   width: 100%;
   max-width: 1320px;
   margin: 0 auto;
+}
+
+/* 안내창 */
+.modal-wrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 99999;
+}
+
+.modal-main {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 550px;
+  height: 400px;
+  background: url("../images/modalimg.png") no-repeat center #ddd;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.7);
+  border: 5px solid rgba(0, 0, 0, 0.1);
+}
+
+.modal-main h1 {
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+  color: #333;
+  padding: 10px 0;
+}
+
+.modal-main p {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+  line-height: 1.8;
+}
+
+.modal-main b {
+  font-weight: 600;
+  text-decoration: underline;
+  color: #ed1c24;
+}
+
+.modal-main strong {
+  font-weight: 600;
+  text-decoration: underline;
+  color: #ed1c24;
+}
+
+.modal-line {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #999;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.modal-main span {
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+  line-height: 1.8;
+  padding: 10px;
+  letter-spacing: 0.5px;
+}
+
+.modal-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  border: 0;
+  cursor: pointer;
+  font-size: 22px;
+  color: #555;
+  background: transparent;
+  /* transition: transform 0.4s; */
+}
+
+.modal-close:hover {
+  /* transform: rotate(90deg); */
+  font-size: 21px;
+}
+
+.modal-close:active {
+  font-size: 22px;
 }
 
 /*모바일 메뉴*/
@@ -425,7 +538,6 @@ body {
   .menu > li > a {
     padding: 0 18px !important;
   }
-
   .member-list > li {
     margin-left: 22px !important;
   }
@@ -444,15 +556,12 @@ body {
     margin-top: 0 !important;
     margin-right: 0 !important;
   }
-
   .gnb {
     display: none !important;
   }
-
   .member-list li:last-child a {
     display: none !important;
   }
-
   .mb-bt {
     display: block;
   }
@@ -548,11 +657,9 @@ body {
   .visual-img {
     height: 45vw !important;
   }
-
   .sw-visual-control {
     top: 41.66vw !important;
   }
-
   .visual-txt {
     padding: 3.78vw 0 !important;
   }
@@ -561,23 +668,18 @@ body {
   .visual-img {
     height: 125vw !important;
   }
-
   .visual-1 {
     background: url("../images/M_minimal_new.png") no-repeat center !important;
   }
-
   .visual-2 {
     background: url("../images/M1_newborn.png") no-repeat center !important;
   }
-
   .visual-3 {
     background: url("../images/M2_BabyEssence.png") no-repeat center !important;
   }
-
   .visual-4 {
     background: url("../images/M3_Branding.png") no-repeat center !important;
   }
-
   .sw-visual-control {
     top: 112.5vw !important;
   }
@@ -586,23 +688,18 @@ body {
   .visual-img {
     height: 124.375vw !important;
   }
-
   .visual-1 {
     background: url("../images/v_480_1.png") no-repeat center !important;
   }
-
   .visual-2 {
     background: url("../images/v_480_2.png") no-repeat center !important;
   }
-
   .visual-3 {
     background: url("../images/v_480_3.png") no-repeat center !important;
   }
-
   .visual-4 {
     background: url("../images/v_480_4.png") no-repeat center !important;
   }
-
   .sw-visual-control {
     top: 115vw !important;
   }
@@ -680,11 +777,9 @@ body {
     width: 100% !important;
     height: 100vw !important;
   }
-
   .category-txt {
     display: none !important;
   }
-
   .wb2 {
     display: inline-block !important;
   }
@@ -755,7 +850,6 @@ body {
   .sitemap-menu {
     padding: 0 20px;
   }
-
   .sitemap-submenu li a {
     font-size: 10px;
   }
@@ -861,29 +955,23 @@ body {
   .footer .inner {
     width: 100%;
   }
-
   .footer-top .inner {
     padding-bottom: 35px;
   }
-
   .siteinfo-list {
     padding: 0 20px;
   }
-
   .siteinfo-list li span {
     display: block;
     margin-bottom: 10px;
   }
-
   .siteinfo-list li span em {
     width: 120px;
   }
-
   .copy {
     width: 100%;
     text-align: center;
   }
-
   .service-list {
     width: 100%;
     text-align: center;
